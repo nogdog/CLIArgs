@@ -97,22 +97,3 @@ class CLIArgs
         return !empty($this->opts);
     }
 }
-
-$args = array(
-    'help' => array(
-        'short' => 'h',
-        'long'  => 'help',
-        'param' => false,
-        'help'  => 'This help text'
-    ),
-    'dir' => array(
-        'short' => 'D',
-        'long'  => 'dir',
-        'param' => 'directory',
-        'help'  => 'Directory to run this in'
-    )
-);
-
-$args = new CLIArgs($args);
-echo "Current Args:".PHP_EOL.print_r($args->getArgs(),1).PHP_EOL;
-echo $args->helpText();
